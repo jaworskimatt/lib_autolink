@@ -29,7 +29,7 @@
 
 		$text = autolink_do($text, '![a-z][a-z-]+://!i',	$limit, $tagfill, $auto_title);
 		$text = autolink_do($text, '!(mailto|skype):!i',	$limit, $tagfill, $auto_title);
-		$text = autolink_do($text, '!www\\.!i',			$limit, $tagfill, $auto_title, 'http://');
+		$text = autolink_do($text, '!www\\.!i',			$limit, $tagfill, $auto_title, 'https://');
 		return $text;
 	}
 
@@ -86,19 +86,19 @@
 			# to see if there was whitespace before this match
 			#
 
-			if ($ok){
-
-				if ($pre){
-					if (!preg_match('![\s\(\[\{>\pZ\p{Cc}]$!s', $pre)){
-
-						#echo "fail 2 at $cursor ($pre)<br />\n";
-
-						$ok = 0;
-						$cursor += $fail_len;
-						$buffer .= $fail_text;
-					}
-				}
-			}
+			#if ($ok){
+			#
+			#	if ($pre){
+			#		if (!preg_match('![\s\(\[\{>\pZ\p{Cc}]$!s', $pre)){
+			#
+			#			#echo "fail 2 at $cursor ($pre)<br />\n";
+			#
+			#			$ok = 0;
+			#			$cursor += $fail_len;
+			#			$buffer .= $fail_text;
+			#		}
+			#	}
+			#}
 
 			#
 			# we want to autolink here - find the extent of the url
