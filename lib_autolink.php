@@ -19,7 +19,7 @@
 
 		# Should http:// be visibly stripped from the front
 		# of URLs?
-		'strip_protocols' => true,
+		'strip_protocols' => FALSE,
 
 	);
 
