@@ -105,7 +105,7 @@
 			#
 
 			if ($ok){
-				if (preg_match('/^([a-z0-9\-\.\/\-_%~!?=,:;&+*#@\(\)\$]+)/i', $post, $matches)){
+				if (preg_match('/^([a-z0-9\-\.\/\-_%~!?=,:;&+*#@\(\)\[\]\$]+)/i', $post, $matches)){
 
 					$url = $hit.$matches[1];
 
